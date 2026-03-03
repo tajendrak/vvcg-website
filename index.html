@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VVCG | Investing In The Future of HR</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState, useEffect } = React;
+
+        function App() {
+            return (
+                <div className="min-h-screen bg-slate-50 text-slate-900">
+                    {/* Navigation */}
+                    <nav className="fixed w-full z-50 bg-white/80 backdrop-blur-md shadow-sm py-4">
+                        <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
+                            <div className="flex items-center gap-2">
+                                <div className="w-10 h-10 bg-indigo-900 rounded-lg flex items-center justify-center text-white font-bold">VV</div>
+                                <span className="font-extrabold text-xl tracking-tight text-indigo-950">VVCG</span>
+                            </div>
+                            <div className="hidden md:flex gap-8 items-center font-semibold text-sm uppercase tracking-wider">
+                                <a href="#" className="hover:text-indigo-600">Services</a>
+                                <a href="#" className="hover:text-indigo-600">Why Us</a>
+                                <button className="bg-indigo-950 text-white px-6 py-2 rounded-full hover:bg-indigo-800 transition-all">Let's Work Together</button>
+                            </div>
+                        </div>
+                    </nav>
+
+                    {/* Hero */}
+                    <section className="pt-40 pb-20 bg-gradient-to-br from-slate-950 via-indigo-950 to-purple-950 text-white">
+                        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+                            <div className="space-y-6">
+                                <h1 className="text-6xl font-extrabold leading-tight">Investing In The <span className="text-indigo-400">Future of HR</span></h1>
+                                <p className="text-xl text-slate-300">Building a workforce for tomorrow, while staying grounded in what matters most—people.</p>
+                                <button className="bg-white text-indigo-950 px-8 py-4 rounded-xl font-bold text-lg hover:shadow-2xl transition-all">Discover Our Services</button>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800" className="rounded-2xl shadow-2xl border border-white/10" />
+                        </div>
+                    </section>
+
+                    {/* Stats */}
+                    <div className="bg-white py-12 border-b border-slate-100">
+                        <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                            <div><div className="text-3xl font-bold">25,000+</div><div className="text-xs uppercase text-slate-500 font-bold">Followers</div></div>
+                            <div><div className="text-3xl font-bold">50+</div><div className="text-xs uppercase text-slate-500 font-bold">Clients</div></div>
+                            <div><div className="text-3xl font-bold">13</div><div className="text-xs uppercase text-slate-500 font-bold">Countries</div></div>
+                            <div><div className="text-3xl font-bold">4</div><div className="text-xs uppercase text-slate-500 font-bold">Awards</div></div>
+                        </div>
+                    </div>
+
+                    {/* Footer */}
+                    <footer className="bg-slate-950 text-white py-20 text-center">
+                        <h2 className="text-4xl font-bold mb-4">Let’s Do Greater Things Together!</h2>
+                        <p className="text-slate-400 mb-8">hello@vvconsultinggroup.com</p>
+                        <div className="text-sm opacity-50">© 2026 VV Consulting Group</div>
+                    </footer>
+                </div>
+            );
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+</html>
