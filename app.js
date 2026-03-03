@@ -59,7 +59,7 @@ const App = () => {
         </a>
     );
 
-    // 1. HOME PAGE (Unchanged)
+    // 1. HOME PAGE
     const HomePage = () => (
         <div className="fade-in">
             <section className="pt-40 pb-24 lg:pt-48 lg:pb-32 bg-gradient-to-br from-slate-950 via-vvcg-navy to-vvcg-purple text-white relative">
@@ -83,12 +83,10 @@ const App = () => {
         </div>
     );
 
-    // 2. ABOUT PAGE (Upgraded based on VVCG Client Deck)
+    // 2. ABOUT PAGE
     const AboutPage = () => (
         <div className="pt-32 pb-24 fade-in bg-white min-h-screen">
             <div className="max-w-6xl mx-auto px-6 slide-up">
-                
-                {/* Header Section */}
                 <div className="text-center mb-20">
                     <h2 className="text-5xl font-extrabold text-vvcg-navy mb-6">Our Story & Scale</h2>
                     <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
@@ -96,13 +94,12 @@ const App = () => {
                     </p>
                 </div>
 
-                {/* Core Differentiators Grid */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-24">
                     {[
-                        { title: "Agility & Adaptability", desc: "Rapidly implementing solutions faster than traditional large firms[cite: 284]." },
-                        { title: "DEI Focused", desc: "Championing Diversity, Equality, and Inclusivity in every strategy[cite: 285]." },
-                        { title: "Tech Innovation", desc: "Early adopters of AI and cutting-edge HR tools[cite: 288, 289]." },
-                        { title: "Media Presence", desc: "Industry thought leaders featured on BFM 89.9 and Business Today[cite: 78, 84, 291]." }
+                        { title: "Agility & Adaptability", desc: "Rapidly implementing solutions faster than traditional large firms." },
+                        { title: "DEI Focused", desc: "Championing Diversity, Equality, and Inclusivity in every strategy." },
+                        { title: "Tech Innovation", desc: "Early adopters of AI and cutting-edge HR tools." },
+                        { title: "Media Presence", desc: "Industry thought leaders featured on BFM 89.9 and Business Today." }
                     ].map((item, i) => (
                         <div key={i} className="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-lg transition-shadow">
                             <h4 className="font-bold text-vvcg-purple mb-3">{item.title}</h4>
@@ -111,24 +108,21 @@ const App = () => {
                     ))}
                 </div>
 
-                {/* 3 Pillar Stats */}
                 <div className="grid lg:grid-cols-3 gap-12 mb-24">
-                    {/* Awards */}
                     <div className="bg-indigo-50 p-10 rounded-3xl relative overflow-hidden">
                         <div className="absolute top-4 right-4 text-indigo-200"><Icons.Award /></div>
                         <h3 className="text-3xl font-bold text-vvcg-navy mb-6">Multi-Award Winning</h3>
                         <ul className="space-y-4 text-slate-700 font-medium">
-                            <li className="flex items-start gap-3"><Icons.CheckCircle /> <span>Best HR Outsourcing Partner 2020 (HRVOTY) </span></li>
-                            <li className="flex items-start gap-3"><Icons.CheckCircle /> <span>Entrepreneur of the Year 2021 (SEBA) </span></li>
-                            <li className="flex items-start gap-3"><Icons.CheckCircle /> <span>ASEAN Rice Bowl Startup Awards [cite: 92]</span></li>
+                            <li className="flex items-start gap-3"><Icons.CheckCircle /> <span>Best HR Outsourcing Partner 2020 (HRVOTY)</span></li>
+                            <li className="flex items-start gap-3"><Icons.CheckCircle /> <span>Entrepreneur of the Year 2021 (SEBA)</span></li>
+                            <li className="flex items-start gap-3"><Icons.CheckCircle /> <span>ASEAN Rice Bowl Startup Awards</span></li>
                         </ul>
                     </div>
 
-                    {/* Global Footprint */}
                     <div className="bg-vvcg-navy p-10 rounded-3xl text-white relative overflow-hidden">
                         <div className="absolute top-4 right-4 text-indigo-500/30"><Icons.Globe /></div>
                         <h3 className="text-3xl font-bold mb-6">13 Countries</h3>
-                        <p className="text-indigo-200 mb-4 font-medium">Global footprint supporting expansion[cite: 132]:</p>
+                        <p className="text-indigo-200 mb-4 font-medium">Global footprint supporting expansion:</p>
                         <div className="flex flex-wrap gap-2">
                             {['Malaysia', 'Singapore', 'Dubai', 'USA', 'France', 'Japan', 'China', 'Korea', 'Estonia'].map(country => (
                                 <span key={country} className="bg-white/10 px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase">{country}</span>
@@ -136,104 +130,112 @@ const App = () => {
                         </div>
                     </div>
 
-                    {/* Community */}
                     <div className="bg-purple-50 p-10 rounded-3xl relative overflow-hidden">
                         <div className="absolute top-4 right-4 text-purple-200"><Icons.Heart /></div>
                         <h3 className="text-3xl font-bold text-vvcg-purple mb-6">Sustainability</h3>
-                        <p className="text-slate-700 mb-4 font-medium">Giving back to the community is in our DNA[cite: 48].</p>
+                        <p className="text-slate-700 mb-4 font-medium">Giving back to the community is in our DNA.</p>
                         <ul className="space-y-4 text-slate-700 font-medium">
-                            <li className="flex items-start gap-3"><Icons.CheckCircle /> <span>Empower Hero project for underprivileged children [cite: 49]</span></li>
-                            <li className="flex items-start gap-3"><Icons.CheckCircle /> <span>Strategic Partnership with Rotary Club of Hartamas [cite: 50]</span></li>
+                            <li className="flex items-start gap-3"><Icons.CheckCircle /> <span>Empower Hero project for underprivileged children</span></li>
+                            <li className="flex items-start gap-3"><Icons.CheckCircle /> <span>Strategic Partnership with Rotary Club of Hartamas</span></li>
                         </ul>
                     </div>
                 </div>
-
             </div>
         </div>
     );
 
-    // 3. SERVICES PAGE (Upgraded based on VVCG Client Deck)
-    const ServicesPage = () => (
-        <div className="pt-32 pb-24 bg-slate-50 fade-in min-h-screen">
-            <div className="max-w-7xl mx-auto px-6">
-                
-                <div className="text-center mb-20 slide-up">
-                    <h2 className="text-5xl font-extrabold text-vvcg-navy mb-4">Core Solutions</h2>
-                    <p className="text-xl text-slate-500 max-w-2xl mx-auto">Value and Impact driven by Agility, Diversity, and Innovation[cite: 278, 279, 281].</p>
-                </div>
+    // 3. SERVICES PAGE (Includes the fully detailed 13-Step Roadmap)
+    const ServicesPage = () => {
+        const roadmapSteps = [
+            { id: "01", title: "Onboarding and Kickoff" },
+            { id: "02", title: "Needs Assessment" },
+            { id: "03", title: "Review of Policies and Processes" },
+            { id: "04", title: "Clear Timelines and Proposal" },
+            { id: "05", title: "Client Approval and Agreement" },
+            { id: "06", title: "Implementation and Kick-Off" },
+            { id: "07", title: "Introduction to external & in-house team" },
+            { id: "08", title: "Execution and Monitoring" },
+            { id: "09", title: "Feedbacks and Adjustments" },
+            { id: "10", title: "Completion and Delivery" },
+            { id: "11", title: "Post-Implementation & Follow-Up Support" },
+            { id: "12", title: "Evaluation" },
+            { id: "13", title: "Long Term Relationship Building" }
+        ];
 
-                {/* Main 3 Services Grid */}
-                <div className="grid lg:grid-cols-3 gap-8 slide-up mb-24">
-                    {/* HR & Payroll */}
-                    <div className="bg-white p-10 rounded-3xl shadow-xl border border-slate-100 hover:-translate-y-2 transition-transform">
-                        <div className="inline-block px-4 py-1.5 rounded-full bg-indigo-100 text-indigo-800 text-xs font-bold uppercase tracking-widest mb-6">SMEs & Startups</div>
-                        <h3 className="text-2xl font-bold mb-6 text-vvcg-purple">HR & Payroll Outsourcing</h3>
-                        <p className="text-slate-600 mb-8 leading-relaxed">End-to-End HR processing, guaranteeing compliance and operational efficiency. We act as your external support team[cite: 339, 345].</p>
-                        <ul className="space-y-3 text-sm font-medium text-slate-700">
-                            <li className="flex items-start gap-2"><Icons.CheckCircle /> Registration for KWSP, PERKESO & LHDN [cite: 334, 337]</li>
-                            <li className="flex items-start gap-2"><Icons.CheckCircle /> Setting up departments from scratch [cite: 314]</li>
-                            <li className="flex items-start gap-2"><Icons.CheckCircle /> IR/ER Advisory & Compliance [cite: 309]</li>
-                        </ul>
-                    </div>
-
-                    {/* Recruitment */}
-                    <div className="bg-white p-10 rounded-3xl shadow-xl border border-slate-100 hover:-translate-y-2 transition-transform">
-                        <div className="inline-block px-4 py-1.5 rounded-full bg-indigo-100 text-indigo-800 text-xs font-bold uppercase tracking-widest mb-6">Tech & IPOs</div>
-                        <h3 className="text-2xl font-bold mb-6 text-vvcg-purple">Strategic Recruitment</h3>
-                        <p className="text-slate-600 mb-8 leading-relaxed">We manage your entire recruitment process, reducing the burden on internal HR while sourcing top-tier talent[cite: 319, 350].</p>
-                        <ul className="space-y-3 text-sm font-medium text-slate-700">
-                            <li className="flex items-start gap-2"><Icons.CheckCircle /> Headhunting & Talent Search [cite: 322]</li>
-                            <li className="flex items-start gap-2"><Icons.CheckCircle /> RPO & Workforce Outsourcing [cite: 364]</li>
-                            <li className="flex items-start gap-2"><Icons.CheckCircle /> Talent on Demand & PERM [cite: 366]</li>
-                        </ul>
-                    </div>
-
-                    {/* Leadership Training */}
-                    <div className="bg-vvcg-navy p-10 rounded-3xl shadow-xl border border-slate-800 hover:-translate-y-2 transition-transform text-white">
-                        <div className="inline-block px-4 py-1.5 rounded-full bg-green-500/20 text-green-400 border border-green-500/30 text-xs font-bold uppercase tracking-widest mb-6">HRDF Claimable</div>
-                        <h3 className="text-2xl font-bold mb-6 text-indigo-300">Leadership Training</h3>
-                        <p className="text-slate-300 mb-8 leading-relaxed">A coaching-led, diagnostic approach rather than just training. We strengthen judgment through disciplined insight[cite: 429, 431].</p>
-                        <ul className="space-y-3 text-sm font-medium text-indigo-100">
-                            <li className="flex items-start gap-2"><span className="text-indigo-400">✓</span> Emotional Intelligence (EI) [cite: 396]</li>
-                            <li className="flex items-start gap-2"><span className="text-indigo-400">✓</span> Self-Awareness & Communication [cite: 393, 394]</li>
-                            <li className="flex items-start gap-2"><span className="text-indigo-400">✓</span> One-Day Awareness Program [cite: 383]</li>
-                        </ul>
-                    </div>
-                </div>
-
-                {/* Consulting Roadmap Section */}
-                <div className="bg-white rounded-3xl p-10 lg:p-16 shadow-lg border border-slate-100 slide-up">
-                    <div className="text-center mb-12">
-                        <h3 className="text-3xl font-bold text-vvcg-navy mb-4">The HR Consulting Roadmap</h3>
-                        <p className="text-slate-500">Our proven 13-step methodology to transform your organization[cite: 551].</p>
-                    </div>
+        return (
+            <div className="pt-32 pb-24 bg-slate-50 fade-in min-h-screen">
+                <div className="max-w-7xl mx-auto px-6">
                     
-                    <div className="flex flex-col md:flex-row justify-between items-start relative">
-                        {/* Hidden line connecting steps on desktop */}
-                        <div className="hidden md:block absolute top-6 left-0 w-full h-1 bg-indigo-100 z-0"></div>
-                        
-                        {[
-                            { step: "01", title: "Onboarding", desc: "Kickoff & Needs Assessment [cite: 554, 555]" },
-                            { step: "04", title: "Strategy", desc: "Clear Timelines & Proposal [cite: 557]" },
-                            { step: "08", title: "Execution", desc: "Implementation & Monitoring [cite: 565, 566]" },
-                            { step: "13", title: "Growth", desc: "Long Term Relationship Building [cite: 574]" }
-                        ].map((phase, idx) => (
-                            <div key={idx} className="relative z-10 flex flex-col items-center text-center max-w-[200px] mb-8 md:mb-0">
-                                <div className="w-12 h-12 rounded-full bg-vvcg-purple text-white font-bold flex items-center justify-center text-lg mb-4 shadow-lg ring-4 ring-white">
-                                    {phase.step}
-                                </div>
-                                <h4 className="font-bold text-vvcg-navy mb-2">{phase.title}</h4>
-                                <p className="text-xs font-medium text-slate-500">{phase.desc}</p>
-                            </div>
-                        ))}
+                    <div className="text-center mb-20 slide-up">
+                        <h2 className="text-5xl font-extrabold text-vvcg-navy mb-4">Core Solutions</h2>
+                        <p className="text-xl text-slate-500 max-w-2xl mx-auto">Value and Impact driven by Agility, Diversity, and Innovation.</p>
                     </div>
+
+                    <div className="grid lg:grid-cols-3 gap-8 slide-up mb-24">
+                        {/* HR & Payroll */}
+                        <div className="bg-white p-10 rounded-3xl shadow-xl border border-slate-100 hover:-translate-y-2 transition-transform">
+                            <div className="inline-block px-4 py-1.5 rounded-full bg-indigo-100 text-indigo-800 text-xs font-bold uppercase tracking-widest mb-6">SMEs & Startups</div>
+                            <h3 className="text-2xl font-bold mb-6 text-vvcg-purple">HR & Payroll Outsourcing</h3>
+                            <p className="text-slate-600 mb-8 leading-relaxed">End-to-End HR processing, guaranteeing compliance and operational efficiency. We act as your external support team.</p>
+                            <ul className="space-y-3 text-sm font-medium text-slate-700">
+                                <li className="flex items-start gap-2"><Icons.CheckCircle /> Registration for KWSP, PERKESO & LHDN</li>
+                                <li className="flex items-start gap-2"><Icons.CheckCircle /> Setting up departments from scratch</li>
+                                <li className="flex items-start gap-2"><Icons.CheckCircle /> IR/ER Advisory & Compliance</li>
+                            </ul>
+                        </div>
+
+                        {/* Recruitment */}
+                        <div className="bg-white p-10 rounded-3xl shadow-xl border border-slate-100 hover:-translate-y-2 transition-transform">
+                            <div className="inline-block px-4 py-1.5 rounded-full bg-indigo-100 text-indigo-800 text-xs font-bold uppercase tracking-widest mb-6">Tech & IPOs</div>
+                            <h3 className="text-2xl font-bold mb-6 text-vvcg-purple">Strategic Recruitment</h3>
+                            <p className="text-slate-600 mb-8 leading-relaxed">We manage your entire recruitment process, reducing the burden on internal HR while sourcing top-tier talent.</p>
+                            <ul className="space-y-3 text-sm font-medium text-slate-700">
+                                <li className="flex items-start gap-2"><Icons.CheckCircle /> Headhunting & Talent Search</li>
+                                <li className="flex items-start gap-2"><Icons.CheckCircle /> RPO & Workforce Outsourcing</li>
+                                <li className="flex items-start gap-2"><Icons.CheckCircle /> Talent on Demand & PERM</li>
+                            </ul>
+                        </div>
+
+                        {/* Leadership Training */}
+                        <div className="bg-vvcg-navy p-10 rounded-3xl shadow-xl border border-slate-800 hover:-translate-y-2 transition-transform text-white">
+                            <div className="inline-block px-4 py-1.5 rounded-full bg-green-500/20 text-green-400 border border-green-500/30 text-xs font-bold uppercase tracking-widest mb-6">HRDF Claimable</div>
+                            <h3 className="text-2xl font-bold mb-6 text-indigo-300">Leadership Training</h3>
+                            <p className="text-slate-300 mb-8 leading-relaxed">A coaching-led, diagnostic approach rather than just training. We strengthen judgment through disciplined insight.</p>
+                            <ul className="space-y-3 text-sm font-medium text-indigo-100">
+                                <li className="flex items-start gap-2"><span className="text-indigo-400">✓</span> Emotional Intelligence (EI)</li>
+                                <li className="flex items-start gap-2"><span className="text-indigo-400">✓</span> Self-Awareness & Communication</li>
+                                <li className="flex items-start gap-2"><span className="text-indigo-400">✓</span> One-Day Awareness Program</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    {/* Full 13-Step Consulting Roadmap */}
+                    <div className="bg-white rounded-3xl p-10 lg:p-16 shadow-lg border border-slate-100 slide-up">
+                        <div className="text-center mb-16">
+                            <h3 className="text-4xl font-bold text-vvcg-navy mb-4">The HR Consulting Roadmap</h3>
+                            <p className="text-slate-500 max-w-2xl mx-auto">Our proven 13-step methodology designed to seamlessly integrate with your business and transform your organizational structure.</p>
+                        </div>
+                        
+                        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-10">
+                            {roadmapSteps.map((phase, idx) => (
+                                <div key={idx} className="relative flex flex-col items-start p-4 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-md transition-shadow group">
+                                    <div className="text-4xl font-black text-indigo-100 mb-3 group-hover:text-indigo-200 transition-colors">
+                                        {phase.id}
+                                    </div>
+                                    <h4 className="font-bold text-vvcg-navy leading-tight text-sm md:text-base">
+                                        {phase.title}
+                                    </h4>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
                 </div>
-
             </div>
-        </div>
-    );
+        );
+    };
 
-    // 4. CONTACT PAGE (Unchanged)
+    // 4. CONTACT PAGE
     const ContactPage = () => (
         <div className="pt-32 pb-24 fade-in min-h-screen bg-white">
             <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-start slide-up">
